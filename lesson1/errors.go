@@ -4,20 +4,20 @@ import (
 	"github.com/pkg/errors"
 )
 
-type MyError struct {
+type myError struct {
 	text string
 }
 
-func (e *MyError) Error() string {
+func (e *myError) Error() string {
 	return e.text
 }
 
-func CreateError(text string) error {
-	return &MyError{text: text}
+func createError(text string) error {
+	return &myError{text: text}
 }
 
 func checkError(text string) error {
-	err := CreateError(text)
+	err := createError(text)
 	if err != nil {
 		return errors.Wrap(err, "MyError")
 	}

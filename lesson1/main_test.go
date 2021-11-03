@@ -1,6 +1,8 @@
 package main
 
-import "testing"
+import (
+	"testing"
+)
 
 func BenchmarkCreateOneMillionFiles(b *testing.B) {
 	createOneMillionFiles()
