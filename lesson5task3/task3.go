@@ -45,5 +45,4 @@ func writeReadRW(writeNum int, readNum int) {
 			mu.RUnlock()
 		}()
 	}
-
 }

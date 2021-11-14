@@ -75,9 +75,8 @@ type number struct {
 	mu  sync.Mutex
 }
 
-func (n *number) addOne() int {
+func (n *number) addOne() {
 	n.mu.Lock()
 	defer n.mu.Unlock()
 	n.num++
-	return n.num
 }
